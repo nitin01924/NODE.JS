@@ -1,5 +1,5 @@
 import fs from "fs";
-import fs from "fs/promises";
+import fsp from "fs/promises";
 
 // async function writefile(params) {
 //   fs.writeFile(
@@ -18,10 +18,11 @@ fs.readFile("file.txt", "utf-8", (err, data) => {
 
 async function readit() {
   try {
-    const data = await fs.readFile('file.txt',  'utf-8')
+    const data = await fsp.readFile('file.txt',  'utf-8')
     console.log(data)
   } catch (error) {
     console.log(error)
   }
 }
 readit()
+
